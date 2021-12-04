@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+$cBlack: black;
+$cWhite: white;
+$cOrange: orange;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  padding: 1rem;
+  position: relative;
+  background-color: gray;
+}
+
+div {
+  font-weight: 600;
+  padding: 5rem;
+  font-size: 1.1em;
+  width: 150px;
+  height: 150px;
+  box-shadow: 7px 7px 0 0 $cBlack;
+}
+
+.div-1 {
+  background-color: $cOrange;
+  top: 10px;
+  left: 10px;
+  position: absolute;
+}
+
+.div-2 {
+  background-color: orangered;
+  display: none;
+}
+
+.div-3 {
+  background-color: teal;
+  display: none;
+}
+
+.rect {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: $cOrange;
+  transform: translate(50px) scale(2, 1.5);
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 40px;
+  margin: 50px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  &.float:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  &.filled {
+    background-color: $cBlack;
+    color: $cWhite;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    &:hover {
+      background-color: $cWhite;
+      color: $cBlack;
+      box-shadow: none;
+    }
+  }
+  &.letter-spacing:hover {
+    background-color: $cBlack;
+    letter-spacing: 3px;
+    color: $cWhite;
+  }
+  &.shadow:hover {
+    transform: translate(-2.5px, -2.5px);
+    box-shadow: 5px 5px 0 0 $cBlack;
+  }
+  &.solid {
+    box-shadow: 2px 2px 0 0 $cBlack;
+    border-radius: 7px;
+    &:hover {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+  }
+}
