@@ -18,7 +18,7 @@ $cOrange: orange;
 
 div {
   font-weight: 600;
-  padding: 5rem;
+  padding: 0.5rem;
   font-size: 1.1em;
   width: 150px;
   height: 150px;
@@ -27,19 +27,28 @@ div {
 
 .div-1 {
   background-color: $cOrange;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   position: absolute;
 }
 
 .div-2 {
   background-color: orangered;
-  display: none;
+  position: absolute;
 }
 
 .div-3 {
   background-color: teal;
-  display: none;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: auto;
+}
+.div-4 {
+  width: 80px;
+  height: 80px;
+  background-color: violet;
+  position: absolute;
 }
 
 .rect {
