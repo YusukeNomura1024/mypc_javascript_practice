@@ -1,21 +1,26 @@
 @charset "UTF-8";
 #container {
-  text-align: center; }
+  text-align: center;
+}
 
 .try .btn {
   position: relative;
   display: inline-block;
-  transform-style: preserve-3d;
-  perspective: 300px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 300px;
+          perspective: 300px;
   width: 150px;
   height: 50px;
   margin: 0 auto;
   cursor: pointer;
   transform-style: preserve-3d;
-  perspective: 300px; }
+  perspective: 300px;
+}
 
 .try .btn.cubic {
-  /** スタイルをここに追加。*/ }
+  /** スタイルをここに追加。*/
+}
 
 .try .btn.cubic span {
   position: absolute;
@@ -27,26 +32,35 @@
   border: 1px solid black;
   line-height: 50px;
   text-align: center;
-  transition: all 0.3s; }
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 
 .try .btn.cubic .hovering {
   background-color: blue;
   color: white;
-  transform: rotateX(90deg);
-  transform-origin: center center -26px; }
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: center center -26px;
+          transform-origin: center center -26px;
+}
 
 .try .btn.cubic .default {
   background-color: white;
   color: black;
-  transform: rotateX(0);
-  transform-origin: center center -26px; }
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transform-origin: center center -26px;
+          transform-origin: center center -26px;
+}
 
 .try .btn.cubic:hover .hovering {
-  transform: rotateX(0); }
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
 
 .try .btn.cubic:hover .default {
-  transform: rotateX(-90deg); }
-
-/*# sourceMappingURL=try.css.map */
-
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
 /*# sourceMappingURL=try.css.map */
