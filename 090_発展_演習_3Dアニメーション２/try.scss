@@ -33,7 +33,7 @@ $cBlack: black;
         transition: all 0.3s;
       }
       .hovering {
-        background-color: $cBlack;
+        background-color: blue;
         color: $cWhite;
         transform: rotateX(90deg);
         transform-origin: center center -26px;
