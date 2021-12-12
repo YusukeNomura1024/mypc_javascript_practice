@@ -26,10 +26,6 @@ body {
     background-color: black;
   }
 
-  50% {
-    transform: scale(2);
-  }
-
   to {
     transform: scale(1);
     background-color: green;
