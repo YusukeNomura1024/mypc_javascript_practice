@@ -89,6 +89,67 @@
           animation-fill-mode: forwards;
 }
 
+.try .rect-spinner {
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.try .rect-spinner div {
+  width: 6px;
+  height: 15px;
+  background-color: black;
+  margin-left: 3px;
+  -webkit-animation-name: rect-spinner;
+          animation-name: rect-spinner;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.try .rect-spinner div:nth-child(1) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.try .rect-spinner div:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.try .rect-spinner div:nth-child(3) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.try .rect-spinner div:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.try .rect-spinner div:nth-child(5) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
 @-webkit-keyframes spinner {
   from {
     -webkit-transform: rotateX(0deg);
@@ -142,6 +203,40 @@
             transform: scale(0);
     background-color: #4d4d4d;
     z-index: 1;
+  }
+}
+
+@-webkit-keyframes rect-spinner {
+  from,
+  30% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(3);
+            transform: scaleY(3);
+  }
+  70%,
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes rect-spinner {
+  from,
+  30% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  50% {
+    -webkit-transform: scaleY(3);
+            transform: scaleY(3);
+  }
+  70%,
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 /*# sourceMappingURL=try.css.map */

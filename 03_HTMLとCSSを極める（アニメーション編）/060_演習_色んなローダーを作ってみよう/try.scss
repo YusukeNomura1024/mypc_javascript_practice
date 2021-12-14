@@ -58,6 +58,31 @@
       }
     }
   }
+  .rect-spinner {
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      width: 6px;
+      height: 15px;
+      background-color: black;
+      margin-left: 3px;
+      @include animation(
+        $name: rect-spinner,
+        $timing-function: linear,
+        $iteration-count: infinite,
+        $duration: 1.5s
+      );
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          animation-delay: 0.15s * $i;
+        }
+      }
+    }
+  }
 
   @keyframes spinner {
     from {
@@ -78,6 +103,19 @@
       transform: scale(0);
       background-color: rgb(77, 77, 77);
       z-index: 1;
+    }
+  }
+  @keyframes rect-spinner {
+    from,
+    30% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(3);
+    }
+    70%,
+    100% {
+      transform: scaleY(1);
     }
   }
 }
