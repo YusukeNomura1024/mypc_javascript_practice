@@ -3,119 +3,27 @@
 .try {
   /** ここに記述しよう */
   .spinner {
-    transform-style: preserve-3d;
-    perspective: 300px;
-    position: relative;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
     margin: 100px auto;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background-color: black;
-      perspective-origin: center center;
-      @include animation(
-        $name: spinner,
-        $iteration-count: infinite,
-        $duration: 1.2s
-      );
-    }
-  }
-  .double-spinner {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 100px auto;
-    & div {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(161, 161, 161);
-      border-radius: 50%;
-      &:nth-child(1) {
-        @include animation(
-          $name: double-spinner,
-          $duration: 1s,
-          $direction: alternate,
-          $iteration-count: infinite,
-          $timing-function: ease-in-out
-        );
-      }
-      &:nth-child(2) {
-        @include animation(
-          $name: double-spinner,
-          $duration: 1s,
-          $direction: alternate,
-          $iteration-count: infinite,
-          $timing-function: ease-in-out,
-          $delay: 1s
-        );
-      }
-    }
-  }
-  .rect-spinner {
-    width: 100px;
-    height: 50px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    div {
-      width: 6px;
-      height: 15px;
-      background-color: black;
-      margin-left: 3px;
-      @include animation(
-        $name: rect-spinner,
-        $timing-function: linear,
-        $iteration-count: infinite,
-        $duration: 1.5s
-      );
-      @for $i from 1 through 5 {
-        &:nth-child(#{$i}) {
-          animation-delay: 0.15s * $i;
-        }
-      }
-    }
+    @include animation(
+      $name: sk-rotateplane2,
+      $duration: 1.2s,
+      $iteration-count: infinite
+    );
   }
 
-  @keyframes spinner {
-    from {
-      transform: rotateX(0deg);
+  @keyframes sk-rotateplane2 {
+    0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
     }
     50% {
-      transform: rotateX(-180deg);
+      transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
     }
-    to {
-      transform: rotateZ(180deg);
-    }
-  }
-  @keyframes double-spinner {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0);
-      background-color: rgb(77, 77, 77);
-      z-index: 1;
-    }
-  }
-  @keyframes rect-spinner {
-    from,
-    30% {
-      transform: scaleY(1);
-    }
-    50% {
-      transform: scaleY(3);
-    }
-    70%,
     100% {
-      transform: scaleY(1);
+      transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
     }
   }
 }
