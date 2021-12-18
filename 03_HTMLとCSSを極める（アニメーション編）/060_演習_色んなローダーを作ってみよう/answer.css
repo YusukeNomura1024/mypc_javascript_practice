@@ -87,19 +87,19 @@
   top: 0;
   left: 0;
   -webkit-animation-name: sk-bounce;
-  animation-name: sk-bounce;
+          animation-name: sk-bounce;
   -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
   -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+          animation-delay: 0s;
   -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-direction: normal;
-  animation-direction: normal;
+          animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .answer .double-spinner > div:nth-child(2) {
