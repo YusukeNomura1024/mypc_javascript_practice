@@ -18,6 +18,16 @@
           transform: translateX(-40px);
 }
 
+.appear.left-turn .item {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.appear.right-turn .item {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .appear .item {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;

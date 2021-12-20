@@ -5,7 +5,20 @@ $pattern: (
   "right": translateX(-40px),
 );
 
+$pattern2: (
+  "left-turn": rotate(90deg),
+  "right-turn": rotate(-90deg),
+);
+
 @each $key, $value in $pattern {
+  .appear.#{$key} {
+    & .item {
+      transform: $value;
+    }
+  }
+}
+
+@each $key, $value in $pattern2 {
   .appear.#{$key} {
     & .item {
       transform: $value;
