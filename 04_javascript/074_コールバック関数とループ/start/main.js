@@ -20,6 +20,7 @@ function double(val) {
 }
 
 function plusOneAndDouble(val) {
+  //値にプラス１をしてから２倍にする
   val = val + 1;
   double(val);
 }
