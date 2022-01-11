@@ -7,11 +7,15 @@ const obj = {
             console.log(this);
         };
         window.setTimeout(fn);  
+        //thisの示す値はどんどん階層を上がっていったときに直近となるオブジェクトである
+        
     }
 }
 
 class MyObj {
     constructor() {
+        //新規作成したクラスオブジェクトにプロパティを
+        //持たせたいときは、thisを使わなければならない
         this.first_name = 'Mafia';
         this.last_name = 'Code';
     }
