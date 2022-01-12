@@ -58,3 +58,15 @@ class TextAnimation {
 //でその関数の中にfunctionをさらに使って、その中でthisを使った場合は、
 //直近で使ったオブジェクトはリセットされる？？
 
+
+const aa = {
+    loglog: function(){
+        console.log(this);
+    }
+};
+
+aa.loglog();
+btn.addEventListener('click', aa.loglog);
+btn.addEventListener('click', function() {
+    aa.loglog();
+});
