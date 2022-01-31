@@ -153,6 +153,28 @@ body {
   font-size: 25px;
 }
 
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pd-lg {
+  padding-bottom: 80px !important;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -186,6 +208,12 @@ Stylesheet: 960px以上のモニタで適用
   }
   .font-lg {
     font-size: 36px;
+  }
+  .mb-lg {
+    margin-bottom: 150px !important;
+  }
+  .pd-lg {
+    padding-bottom: 150px !important;
   }
 }
 
