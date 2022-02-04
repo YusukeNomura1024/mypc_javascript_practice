@@ -3,7 +3,7 @@ class ScrollObserver {
     this.els = document.querySelectorAll(els);
     const defaultOptions = {
       root: null, //rootを設定することで、親要素や先祖要素が交差すると起動する
-      rootMargin: "-300px 0px",
+      rootMargin: "0px",
       threshold: 0,
       once: true
     }
