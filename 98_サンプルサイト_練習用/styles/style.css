@@ -1397,6 +1397,10 @@ Stylesheet: 960px以上のモニタで適用
   .mobile-menu__btn {
     display: none;
   }
+  .swiper-slide {
+    -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+  }
 }
 
 @media (min-width: 1280px) {
