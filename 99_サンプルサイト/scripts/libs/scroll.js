@@ -30,7 +30,7 @@ class ScrollObserver {
 
         // @see https://github.com/w3c/IntersectionObserver/tree/master/polyfill
         this.io.POLL_INTERVAL = 100;
-        
+    
         this.els.forEach(el => this.io.observe(el));
     }
 

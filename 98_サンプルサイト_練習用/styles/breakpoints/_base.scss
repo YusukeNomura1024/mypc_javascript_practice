@@ -33,7 +33,7 @@ img {
 .pb-sm {
   padding-bottom: 16px !important;
 }
-.pd-lg {
+.pb-lg {
   padding-bottom: 80px !important;
 }
 .content-width {
@@ -57,10 +57,6 @@ img {
 }
 .purple {
   color: $cWineRed;
-}
-
-#content {
-  padding-top: $navHeight;
 }
 
 #main-content {
@@ -140,6 +136,7 @@ main {
 
 .travel {
   @extend .content-width;
+  @extend .mb-lg;
 
   &__inner {
     @extend .flex;
@@ -200,6 +197,7 @@ main {
 }
 .houses {
   @extend .content-width;
+  @extend .mb-lg;
 
   &__inner {
     @extend .flex;
@@ -251,6 +249,7 @@ main {
   &__btn {
     text-align: center;
     flex-basis: 100%;
+    @extend .mb-lg;
   }
 
   &__img {
