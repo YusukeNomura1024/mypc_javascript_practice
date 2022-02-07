@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 class Main {
   constructor() {
     this.header = document.querySelector('.header');
+    this.sides = document.querySelectorAll('.side');
     this._observers = [];
     this._init();
   }
@@ -44,6 +45,14 @@ class Main {
     }
   }
 
+  _sideAnimation(el, inview) {
+    if(inview) {
+      this.sides.forEach(side => side.classList.add('inview'));
+    }else {
+      this.sides.forEach(side => side.classList.remove('inview'));
+    }
+  }
+
   _textAnimation(el, isIntersecting) {
     if(isIntersecting) {
       const ta = new TweenTextAnimation(el);
@@ -75,7 +84,9 @@ class Main {
     this.observers = new ScrollObserver('.cover-slide', this._inviewAnimation);
     //代入がされていない状態で呼び出されるとゲッターメソッドとして呼びさす
     // console.log(this.observers);
-    this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation);
+    this.observers = new ScrollObserver('.appear', this._inviewAnimation);
+    this.observers = new ScrollObserver('.tween-animate-title', this._textAnimation, {once: true, rootMargin: "-200px 0px"});
     this.observers = new ScrollObserver('.swiper-container', this._toggleSlideAnimation.bind(this), {once: false});
+    this.observers = new ScrollObserver('#main-content', this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
   }
 }
